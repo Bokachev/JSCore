@@ -3,12 +3,12 @@
 let date = new Date();
 let hour = date.getHours();
 
-/*
+
 (hour > 5 && hour <= 11) ? alert('Доброго ранку'):
     (hour > 11 && hour <= 17) ? alert('Доброго дня') :
     (hour > 17 && hour <= 23) ? alert('Доброго вечора') : alert('Доброї ночі');
 
-if (hour > 5 && hour <= 11) {
+/*if (hour > 5 && hour <= 11) {
     alert('Доброго ранку');
 } else if (hour > 11 && hour <= 17) {
     alert('Доброго дня');
@@ -22,7 +22,7 @@ if (hour > 5 && hour <= 11) {
 // Task 4
 
 
-let sideA = Number(prompt('Введіть розмір сторони А', '1'));
+/*let sideA = Number(prompt('Введіть розмір сторони А', '1'));
 let sideB = Number(prompt('Введіть розмір сторони B', '2'));
 let sideC = Number(prompt('Введіть розмір сторони C', '3'));
 
@@ -41,7 +41,7 @@ if ((sideA <= 0) || (sideB <= 0) || (sideC <= 0)) {
 
 } else {
     console.log('Трикутник з такими сторонами неможливий');
-};
+};*/
 
 // Task 3 
 
@@ -78,3 +78,29 @@ var res4 = (x + " " + y) * y;
 console.log(res4); // NaN
 console.log(typeof res4); // "number"
 */
+
+
+//Task 1 rus
+/*let sideSquare = prompt('Розмір сторони квадрату =', 3);
+let spaceSquare = sideSquare ** 2;
+console.log(spaceSquare);*/
+
+//Task 2 rus
+/*let num = prompt('Введіть двозначне число =', 33);
+console.log(Math.trunc(num/10));
+console.log(parseInt(num/10));
+console.log(num%10);*/
+
+//Task 3 rus
+/*let a =3, b = 2; 
+console.log (a > 2 && b <= 3);
+*/
+
+//Task 4 rus
+/*let a = 1, b = 3, c = 5;
+console.log(b>a && b<c);
+*/
+
+//Task 5 rus
+/*let a = 107;
+console.log((a > 99 && a < 1000) && (a % 2 != 0));*/
