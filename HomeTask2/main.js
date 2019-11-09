@@ -21,26 +21,28 @@ let hour = date.getHours();
 
 // Task 4
 
+/*let sideA = Number(prompt('Введіть розмір сторони А', '1').replace(' ', ''));
+let sideB = Number(prompt('Введіть розмір сторони B', '2').replace(' ', ''));
+let sideC = Number(prompt('Введіть розмір сторони C', '3').replace(' ', ''));
 
-/*let sideA = Number(prompt('Введіть розмір сторони А', '1'));
-let sideB = Number(prompt('Введіть розмір сторони B', '2'));
-let sideC = Number(prompt('Введіть розмір сторони C', '3'));
+if (isNaN(sideA) != true && isNaN(sideB) != true && isNaN(sideC) != true) {
+    if ((sideA <= 0) || (sideB <= 0) || (sideC <= 0)) {
+        console.log('Incorrect data');
+    } else if ((sideA < sideB + sideC) && (sideB < sideA + sideC) && (sideC < sideA + sideB)) {
+        let p = (sideA + sideB + sideC) / 2;
+        let space = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+        // let space = (p * (p - sideA) * (p - sideB) * (p - sideC))**(1/2);
+        console.log(space.toFixed(3));
 
+        (((Math.pow(sideA, 2) + Math.pow(sideB, 2)) == Math.pow(sideC, 2)) ||
+            ((Math.pow(sideB, 2) + Math.pow(sideC, 2)) == Math.pow(sideA, 2)) ||
+            ((Math.pow(sideC, 2) + Math.pow(sideA, 2)) == Math.pow(sideB, 2))) ? console.log('Прямокутний'): console.log('Usual');
 
-if ((sideA <= 0) || (sideB <= 0) || (sideC <= 0)) {
-    console.log('Incorrect data');
-} else if ((sideA < sideB + sideC) && (sideB < sideA + sideC) && (sideC < sideA + sideB)) {
-    let p = (sideA + sideB + sideC) / 2;
-    let space = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-    // let space = (p * (p - sideA) * (p - sideB) * (p - sideC))**(1/2);
-    console.log(space.toFixed(3));
-
-    (((Math.pow(sideA,2) + Math.pow(sideB,2)) == Math.pow(sideC,2)) ||
-        ((Math.pow(sideB,2) + Math.pow(sideC,2)) == Math.pow(sideA,2)) ||
-        ((Math.pow(sideC,2) + Math.pow(sideA,2)) == Math.pow(sideB,2))) ? console.log('Прямокутний'): console.log('Usual');
-
+    } else {
+        console.log('Трикутник з такими сторонами неможливий');
+    }
 } else {
-    console.log('Трикутник з такими сторонами неможливий');
+    console.log('Одна зсторін дорівнює NaN');
 };*/
 
 // Task 3 
