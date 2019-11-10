@@ -19,13 +19,56 @@ let hour = date.getHours();
 };
 */
 
-// Task 4
+// Task 4 v.2
 
-/*let sideA = Number(prompt('Введіть розмір сторони А', '1').replace(' ', ''));
-let sideB = Number(prompt('Введіть розмір сторони B', '2').replace(' ', ''));
-let sideC = Number(prompt('Введіть розмір сторони C', '3').replace(' ', ''));
 
-if (isNaN(sideA) != true && isNaN(sideB) != true && isNaN(sideC) != true) {
+let sideA = setSizeSide('A'),
+    sideB = setSizeSide('B'),
+    sideC = setSizeSide('C');
+
+function setSizeSide(nameSide) {
+    let side = null;
+    do {
+        side = Number(prompt(`Enter size side ${nameSide}`, '1').replace(' ', ''));
+    }
+    while (isNaN(side) == true);
+
+    return side;
+}
+
+function checkTriangle(sideA, sideB, sideC) {
+    if ((sideA <= 0) || (sideB <= 0) || (sideC <= 0)) {
+        return false;
+    } else
+        return (sideA < sideB + sideC) && (sideB < sideA + sideC) && (sideC < sideA + sideB) ? true : false;
+}
+
+function rightTriangle(sideA, sideB, sideC) {
+    let triangle = (((Math.pow(sideA, 2) + Math.pow(sideB, 2)) == Math.pow(sideC, 2)) ||
+        ((Math.pow(sideB, 2) + Math.pow(sideC, 2)) == Math.pow(sideA, 2)) ||
+        ((Math.pow(sideC, 2) + Math.pow(sideA, 2)) == Math.pow(sideB, 2))) ? 'Right triangle' : 'Usual triangle';
+    return triangle;
+}
+
+function squareTriangle(sideA, sideB, sideC) {
+    let p = (sideA + sideB + sideC) / 2;
+    let space = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+    return space.toFixed(3);
+}
+
+if (checkTriangle(sideA, sideB, sideC)) {
+    console.log(rightTriangle(sideA, sideB, sideC));
+    console.log(squareTriangle(sideA, sideB, sideC));
+} else console.log('Incorect data');
+
+
+// Task 4 v.1
+/*
+sideA = Number(prompt('Введіть розмір сторони А', '1').replace(' ', ''));
+sideB = Number(prompt('Введіть розмір сторони B', '2').replace(' ', ''));
+sideC = Number(prompt('Введіть розмір сторони C', '3').replace(' ', ''));
+*/
+/*if (isNaN(sideA) != true && isNaN(sideB) != true && isNaN(sideC) != true) {
     if ((sideA <= 0) || (sideB <= 0) || (sideC <= 0)) {
         console.log('Incorrect data');
     } else if ((sideA < sideB + sideC) && (sideB < sideA + sideC) && (sideC < sideA + sideB)) {
@@ -43,7 +86,8 @@ if (isNaN(sideA) != true && isNaN(sideB) != true && isNaN(sideC) != true) {
     }
 } else {
     console.log('Одна зсторін дорівнює NaN');
-};*/
+};
+*/
 
 // Task 3 
 
