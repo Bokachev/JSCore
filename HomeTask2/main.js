@@ -31,7 +31,7 @@ function setSizeSide(nameSide) {
     do {
         side = Number(prompt(`Enter size side ${nameSide}`, '1').replace(' ', ''));
     }
-    while (isNaN(side) == true);
+    while (isNaN(side));
 
     return side;
 }
