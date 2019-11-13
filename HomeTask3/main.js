@@ -131,9 +131,9 @@ console.log(lastElem([3, 4, 10, -5], -8));*/
 
 
 
-//Task 6 
+//Task 6 v.1
 
-let str = prompt('Enter string','i love java script');
+/*let str = 'i love java script';
 
 function LetterToUpperCase(str) {
     let arrStr = str.split(' ');
@@ -154,4 +154,20 @@ function LetterToUpperCase(str) {
     return arrStr.join(' ');
 }
 
-console.log(LetterToUpperCase(str));
+console.log(LetterToUpperCase(str));*/
+
+
+//Task 6 v.2
+
+let str = 'i love java script';
+let arrString = str.split(' ');
+let result = arrString.map(function(item) {
+    let arr = item.split('');
+    let firstLet = arr[0].toUpperCase();
+    arr.shift();
+    arr.unshift(firstLet);
+    return arr.join('');
+});
+str = result.join(' ');
+console.log(str);
+ 
