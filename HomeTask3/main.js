@@ -160,14 +160,14 @@ console.log(LetterToUpperCase(str));*/
 //Task 6 v.2
 
 let str = 'i love java script';
-let arrString = str.split(' ');
-let result = arrString.map(function(item) {
-    let arr = item.split('');
-    let firstLet = arr[0].toUpperCase();
-    arr.shift();
-    arr.unshift(firstLet);
-    return arr.join('');
+let inputArrString = str.split(' ');
+let outputArrString = inputArrString.map(function(item) {
+    let arrLetters = item.split('');
+    let upperLetter = arrLetters[0].toUpperCase();
+    arrLetters.shift();
+    arrLetters.unshift(upperLetter);
+    return arrLetters.join('');
 });
-str = result.join(' ');
+str = outputArrString.join(' ');
 console.log(str);
  
