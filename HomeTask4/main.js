@@ -134,11 +134,6 @@ class Triangle extends GeometricFigure {
         this.altitude = altitude;
     }
 
-    toString() {
-        //super.toString();
-        return Object.getPrototypeOf(this).constructor.name;
-    }
-
     getArea() {
         return (this.side * this.altitude) / 2;
     }
@@ -148,11 +143,6 @@ class Square extends GeometricFigure {
     constructor(side) {
         super();
         this.side = side;
-    }
-
-    toString() {
-        //super.toString();
-        return Object.getPrototypeOf(this).constructor.name;
     }
 
     getArea() {
@@ -165,11 +155,6 @@ class Circle extends GeometricFigure {
     constructor(radius) {
         super();
         this.radius = radius;
-    }
-
-    toString() {
-        //super.toString();
-        return Object.getPrototypeOf(this).constructor.name;
     }
 
     getArea() {
@@ -209,10 +194,6 @@ function handleFigures(arr) {
 handleFigures(figures);
 
 
-
-//question
-/*let a=new Square(25);
-console.log(a.toString()); // result undefined this??? */
 
 
 
