@@ -22,8 +22,8 @@ console.log(arrKey);
 showProps(mentor);*/
 
 //Task 3
-/*class Worker {
-    _experience = 1.2;
+class Worker {
+    #experience = 1.2;
 
     constructor(fullName, dayRate, workingDays) {
         this.fullName = fullName;
@@ -31,13 +31,13 @@ showProps(mentor);*/
         this.workingDays = workingDays;
     }
 
-    set experience(value) {
+    set setExp(value) {
         if (value < 0) throw new Error("Negative value");
-        this._experience = value;
+        this.#experience = value;
     }
 
-    get experience() {
-        return this._experience;
+    get showExp() {
+        return this.#experience;
     }
 
     showSalary() {
@@ -45,20 +45,57 @@ showProps(mentor);*/
         console.log(`${this.fullName} salary: ${salaryWorker}`);
     }
 
-    showSalaryWithExperience(){
-        let salaryWorker = (this.dayRate * this.workingDays * this._experience).toFixed();
+    showSalaryWithExperience() {
+        let salaryWorker = (this.dayRate * this.workingDays * this.#experience).toFixed();
         console.log(`${this.fullName} salary: ${salaryWorker}`);
     }
+
+    getSalaryValue() {
+        return (this.dayRate * this.workingDays * this.#experience).toFixed();
+    }
+
+    static compare(workerA, workerB) {
+                if (workerA.#experience === workerB.#experience) {
+                    return workerA.getSalaryValue() - workerB.getSalaryValue();
+                }
+        return workerA.#experience - workerB.#experience;
+    }
+
 }
 
-let worker1 = new Worker("John Johnson", 20, 23);
+let worker1 = new Worker("John Johnson", 20, 23);//1.5 690
+let worker2 = new Worker("Boris John", 19, 20);//1.5 570
+let worker3 = new Worker("Tailor Mars", 18, 17);//1.8 551
+let worker4 = new Worker("Margo Robi", 25, 15);//2 750
+
 console.log(worker1.fullName);
 worker1.showSalary();
-console.log("New experience: " + worker1.experience);
+console.log("New experience: " + worker1.showExp);
 worker1.showSalaryWithExperience();
-worker1.experience = 1.5;
-console.log("New experience: " + worker1.experience);
-worker1.showSalaryWithExperience();*/
+worker1.setExp = 1.5;
+worker2.setExp = 1.5;
+worker3.setExp = 1.8;
+worker4.setExp = 2;
+console.log("New experience: " + worker1.showExp);
+worker1.showSalaryWithExperience();
+
+
+let arrObj = [worker1, worker2, worker3, worker4];
+
+console.log('');
+console.log('arrObj.sort before sorting');
+for (const element of arrObj) {
+    console.log(`${element.fullName}: ${element.getSalaryValue()}`);
+}
+
+arrObj.sort(Worker.compare);
+
+console.log('');
+console.log('Result arrObj.sort and Worker.compare');
+
+for (const element of arrObj) {
+    console.log(`${element.fullName}: ${element.getSalaryValue()}`);
+}
 
 
 //Task 4
@@ -117,7 +154,7 @@ console.log("Current course: " + stud1.showCourse()); //Current course: 4*/
 
 
 // Task 5 
-class GeometricFigure {
+/*class GeometricFigure {
     getArea() {
         return 0;
     }
@@ -163,7 +200,7 @@ class Circle extends GeometricFigure {
 }
 
 
-const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
+const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];*/
 
 /*function handleFigures(arr) {
     let sumSquare = 0;
@@ -180,7 +217,7 @@ const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
  handleFigures(figures);*/
 
 
-function handleFigures(arr) {
+/*function handleFigures(arr) {
     var result = arr.reduce(function (accumulator, currentValue) {
 
         if (currentValue instanceof GeometricFigure) {
@@ -191,7 +228,7 @@ function handleFigures(arr) {
   console.log(result);
 }
 
-handleFigures(figures);
+handleFigures(figures);*/
 
 
 
