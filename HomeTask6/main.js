@@ -33,7 +33,7 @@ setTimeout(() => {
 
 let count = 0;
 for (let element of elem) {
-    console.log(`Selector text ${count}: ${eslement.innerHTML}`);
+    console.log(`Selector text ${count}: ${element.innerHTML}`);
     count++;
 }*/
 
