@@ -14,12 +14,14 @@ document. querySelectorAll('div')[0].innerHTML = 'Last';
 setTimeout(() => { imgElem.src = 'cat.jpg';
     confirm(imgElem.outerHTML); }, 1000);*/
 
-setTimeout(() => {
+/*setTimeout(() => {
     confirm(document.querySelector('img').outerHTML)
     document.querySelector('img').setAttribute('src', 'cat.jpg');
-}, 1000);
+}, 1000);*/
 
-
+setTimeout(() => {
+    confirm(document.querySelector('img').outerHTML = `<img class="image" src="cat.jpg">`);
+}, 1000)
 
 
 //Task 3 *****************************************************
