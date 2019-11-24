@@ -10,6 +10,10 @@ document. querySelectorAll('div')[0].innerHTML = 'Last';
 
 //Task 2 *****************************************************
 
+/*setTimeout(() => {
+    confirm(document.querySelector('img').outerHTML = `<img class="image" src="cat.jpg">`);
+}, 1000)*/
+
 /*var imgElem = document.querySelector('img');
 setTimeout(() => { imgElem.src = 'cat.jpg';
     confirm(imgElem.outerHTML); }, 1000);*/
@@ -19,9 +23,11 @@ setTimeout(() => { imgElem.src = 'cat.jpg';
     document.querySelector('img').setAttribute('src', 'cat.jpg');
 }, 1000);*/
 
-setTimeout(() => {
-    confirm(document.querySelector('img').outerHTML = `<img class="image" src="cat.jpg">`);
-}, 1000)
+/*    setTimeout(() => {
+        document.querySelector('img').removeAttribute('src');
+        document.querySelector('img').setAttribute('src', 'cat.jpg');
+        confirm(document.querySelector('img').outerHTML)
+    }, 1000);*/
 
 
 //Task 3 *****************************************************
