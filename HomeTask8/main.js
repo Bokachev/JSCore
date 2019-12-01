@@ -41,11 +41,12 @@ console.log(newstr);*/
 // ********************** Task 5 **********************
 
 /*function creditCard(num) {
-    return /^\d{4}\-\d{4}\-\d{4}\-\d{4}/.test(num);
+    return /^\d{4}\-\d{4}\-\d{4}\-\d{4}$/.test(num);
 }
 
 console.log(creditCard('8888-8888-8888-8888'));
-console.log(creditCard('8888-8888-8888-aaaa'));*/
+console.log(creditCard('8888-8888-8888-aaaa'));
+console.log(creditCard('8888-8888-8888-8888-8888'));*/
 
 
 // ********************** Task 6 **********************
